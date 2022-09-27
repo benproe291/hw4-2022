@@ -52,6 +52,9 @@ nav a{
   text-decoration: none; 
 }
 
+nav li:hover {
+  text-decoration: underline;
+}
 
 .skip a{
   background: white;

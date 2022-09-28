@@ -141,9 +141,9 @@ nav:focus{
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-.container:first-child{
-  grid-column: 1/-1;
-  background-image: url(../images/header.jpg);
+#main + div{
+  grid-column: 1/span(3);
+  background-image: url(images/header.jpg);
   background-color: #000;
   background-attachment: fixed;
   background-position: center;
@@ -157,10 +157,27 @@ first div in the grid  and place it in the grid. */
 
       /*This will be a lot of rules.... but be strategic and combine seletors*/
 
-.about .method .clients .contact{
+.about, .method, .clients, .contact{
   grid-column: 2/ span 1;
-
 }
+#about, .about-image{
+  grid-row-start: 2;
+}
+#method, .method-image{
+  grid-row-start: 3;
+}
+#clients, .clients-image{
+  grid-row-start: 4;
+}
+#contact, .contact-image{
+  grid-row-start: 5;
+}
+
+.about-image, .method-image, .clients-image, .contact-image{
+  max-height: 600px;
+  overflow: hidden;
+}
+
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
 
